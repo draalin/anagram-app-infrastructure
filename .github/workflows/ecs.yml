@@ -71,7 +71,7 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: infrastructure/modules/ecs/files/task-definition_web.json
+          task-definition: task-definition_web.json
           container-name: slime-web
           image: ${{ steps.build-image.outputs.image }}
   
