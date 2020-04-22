@@ -18,11 +18,11 @@ module "acm" {
 }
 
 module "route53" {
-  source                 = "../../modules/route53"
-  project_name           = var.project_name
-  domain_name            = var.domain_name
-  aws_alb                = module.ecs.aws_alb
-  bastion_public_dns     = module.bastion.bastion_public_dns
+  source             = "../../modules/route53"
+  project_name       = var.project_name
+  domain_name        = var.domain_name
+  aws_alb            = module.ecs.aws_alb
+  bastion_public_dns = module.bastion.bastion_public_dns
 }
 
 module "ecs" {
@@ -50,19 +50,19 @@ module "ecs" {
 }
 
 module "owasp_top_10" {
-  source                            = "../../modules/waf"
-  project_name                      = var.project_name
+  source       = "../../modules/waf"
+  project_name = var.project_name
   # frontend_environment_loadbalancer = module.ecs.loadbalancer_id
-  product_domain                    = "tsi"
-  service_name                      = "slime"
-  environment                       = "production"
-  description                       = "OWASP Top 10 rules for slime.wtf"
-  target_scope                      = "regional"
-  create_rule_group                 = "true"
-  max_expected_uri_size             = "512"
-  max_expected_query_string_size    = "4096"
-  max_expected_body_size            = "4096"
-  max_expected_cookie_size          = "4093"
-  csrf_expected_header              = "x-csrf-token"
-  csrf_expected_size                = "36"
+  product_domain                 = "tsi"
+  service_name                   = "slime"
+  environment                    = "production"
+  description                    = "OWASP Top 10 rules for slime.wtf"
+  target_scope                   = "regional"
+  create_rule_group              = "true"
+  max_expected_uri_size          = "512"
+  max_expected_query_string_size = "4096"
+  max_expected_body_size         = "4096"
+  max_expected_cookie_size       = "4093"
+  csrf_expected_header           = "x-csrf-token"
+  csrf_expected_size             = "36"
 }
