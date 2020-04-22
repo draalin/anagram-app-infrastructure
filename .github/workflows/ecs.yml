@@ -31,7 +31,7 @@ on:
       branches:
         - master
 
-name: ECS
+name: 'Deploy to Amazon ECS'
   
 jobs:
     deploy:
