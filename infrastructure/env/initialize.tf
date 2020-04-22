@@ -2,8 +2,7 @@ provider "aws" {
   region = "us-east-1"
 }
 
-## Naming
-
+# Naming
 variable "project_name" {
   description = "Project Name"
   type        = string
@@ -18,7 +17,6 @@ variable "id_rsa_pub" {
 
 
 # IAM Creation
-
 resource "aws_iam_user" "initialize" {
   name = var.project_name
 }
@@ -37,7 +35,6 @@ output "aws_iam_secret" {
 }
 
 # DynamoDB
-
 resource "aws_dynamodb_table" "initialize" {
   name           = var.project_name
   billing_mode   = "PROVISIONED"
@@ -56,8 +53,6 @@ resource "aws_dynamodb_table" "initialize" {
 }
 
 # S3 Bucket
-
-# S3
 resource "aws_s3_bucket" "initialize" {
   bucket        = var.project_name
   acl           = "private"
@@ -106,7 +101,6 @@ resource "aws_s3_bucket_public_access_block" "initialize" {
 }
 
 # Create Iam Key Pair
-
 resource "aws_iam_user_ssh_key" "initialize" {
   username   = aws_iam_user.initialize.name
   encoding   = "SSH"
