@@ -26,9 +26,11 @@
 
 on:
     push:
+      paths:
+        - 'web/**'
       branches:
         - master
-  
+
 name: Deploy to Amazon ECS
   
 jobs:
@@ -69,7 +71,7 @@ jobs:
         id: task-def
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
-          task-definition: tylerbailey-task-definition.json
+          task-definition: infrastructure/modules/ecs/files/task-definition_web.json
           container-name: slime-web
           image: ${{ steps.build-image.outputs.image }}
   
