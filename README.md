@@ -1,4 +1,5 @@
 # Anagram App / AWS Terraform Infrastructure
+[![Actions Status](https://github.com/draalin/anagram-app-infrastructure/workflows/ecs/badge.svg)](https://github.com/draalin/anagram-app-infrastructure/actions/)
 [![Actions Status](https://github.com/draalin/anagram-app-infrastructure/workflows/Terraform%20Plan/badge.svg)](https://github.com/draalin/anagram-app-infrastructure/actions/)
 [![Actions Status](https://github.com/draalin/anagram-app-infrastructure/workflows/Terraform%20Deploy/badge.svg)](https://github.com/draalin/anagram-app-infrastructure/actions/)
 

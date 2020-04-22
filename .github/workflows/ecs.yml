@@ -31,7 +31,7 @@ on:
       branches:
         - master
 
-name: Deploy to Amazon ECS
+name: ECS
   
 jobs:
     deploy:
@@ -57,7 +57,7 @@ jobs:
         id: build-image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: slime-wtf
+          ECR_REPOSITORY: slime-web
           IMAGE_TAG: latest
         run: |
           # Build a docker container and
