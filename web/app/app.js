@@ -20,7 +20,7 @@ app.get("/:wordInput", (req, res, next) => {
   res.json(JSON.stringify(wordList));
 });
 
-// http://localhost:3000/
+// http://localhost:3000
 app.post('/', function(req, res){
   let checkWord = req.body.wordInput;
   const wordList = checkWordlist(checkWord);
