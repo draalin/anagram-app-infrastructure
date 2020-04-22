@@ -1,0 +1,6 @@
+.git
+.next
+*Dockerfile*
+*docker-compose*
+node_modules
+npm-debug.log

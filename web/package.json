@@ -1,0 +1,11 @@
+{
+  "name": "DevOpsHomework",
+  "author": "Tyler Bailey",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "node app/app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

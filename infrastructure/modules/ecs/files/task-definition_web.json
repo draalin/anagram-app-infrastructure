@@ -1,0 +1,22 @@
+[
+  {
+    "essential": true,
+    "image": "${image_url_web}",
+    "memoryReservation": 128,
+    "name": "${container_name_web}",
+    "portMappings": [
+      {
+        "containerPort": 3000,
+        "hostPort": 0
+      }
+    ],
+    "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+            "awslogs-group": "${log_group_name}",
+            "awslogs-region": "${log_group_region}",
+            "awslogs-stream-prefix": "web"
+        }
+      }
+  }
+]

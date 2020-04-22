@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Anagram App</title>
+
+</head>
+
+<body>
+    <form action="/" method="post">
+        <b>Your Word:</b>
+        <input type="text" name="wordInput" placeholder="..." />
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        $('#submit').click(function() {
+            $.ajax({
+                url: '/',
+                type: 'POST',
+                data: {
+                    wordInput: wordInput,
+                },
+                success: function(msg) {
+                    alert('Word Sent');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
