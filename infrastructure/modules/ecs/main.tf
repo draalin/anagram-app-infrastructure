@@ -286,7 +286,7 @@ resource "aws_ecs_cluster" "main" {
   }
 }
 
-### Task Definitions
+### Task Definition
 
 data "template_file" "task_definition_web" {
   template = "${file("../../modules/ecs/files/task-definition_web.json")}"
