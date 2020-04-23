@@ -25,7 +25,7 @@ app.post('/', function(req, res){
   let checkWord = req.body.wordInput;
   const wordList = checkWordlist(checkWord);
   console.log(`${req.body.wordInput}`);
-  var html = '<b>Your Anagrams:</b> ' + wordList + '<br>' + '<a href="/">Try again!</a>';
+  var html = '<b>Your Anagrams:</b> ' + wordList + '<br>' + '<a href="/">Try again</a>';
   res.send(html);
 });
 
