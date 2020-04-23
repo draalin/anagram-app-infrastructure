@@ -55,7 +55,7 @@ module "owasp_top_10" {
   product_domain                 = "tsi"
   service_name                   = "slime"
   environment                    = "production"
-  description                    = "OWASP Top 10 rules"
+  description                    = "OWASP Top 10 rules."
   target_scope                   = "regional"
   create_rule_group              = "true"
   max_expected_uri_size          = "512"
