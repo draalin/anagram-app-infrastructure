@@ -50,8 +50,8 @@ module "ecs" {
 }
 
 module "owasp_top_10" {
-  source       = "../../modules/waf"
-  project_name = var.project_name
+  source                         = "../../modules/waf"
+  project_name                   = var.project_name
   product_domain                 = "tsi"
   service_name                   = "slime"
   environment                    = "production"
