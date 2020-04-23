@@ -52,11 +52,10 @@ module "ecs" {
 module "owasp_top_10" {
   source       = "../../modules/waf"
   project_name = var.project_name
-  # frontend_environment_loadbalancer = module.ecs.loadbalancer_id
   product_domain                 = "tsi"
   service_name                   = "slime"
   environment                    = "production"
-  description                    = "OWASP Top 10 rules for slime.wtf"
+  description                    = "OWASP Top 10 rules"
   target_scope                   = "regional"
   create_rule_group              = "true"
   max_expected_uri_size          = "512"
