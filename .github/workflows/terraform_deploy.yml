@@ -6,9 +6,6 @@ on:
       - master
     paths:
       - 'infrastructure/**'
-  pull_request:
-    branches:
-      - master
 
 jobs:
   terraform:

@@ -7,8 +7,6 @@ on:
     paths:
       - 'infrastructure/**'
   pull_request:
-    branches-ignore:
-      - master
 
 jobs:
   terraform:
