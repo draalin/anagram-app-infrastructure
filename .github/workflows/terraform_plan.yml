@@ -2,6 +2,8 @@ name: 'Terraform Plan'
 
 on:
   push:
+    branches-ignore:
+      - master
     paths:
       - 'infrastructure/**'
   pull_request:
