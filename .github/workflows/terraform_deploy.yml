@@ -2,6 +2,8 @@ name: 'Terraform Deploy'
 
 on:
   push:
+    branches:
+      - master
     paths:
       - 'infrastructure/**'
   pull_request:

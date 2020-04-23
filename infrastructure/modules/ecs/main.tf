@@ -162,7 +162,7 @@ resource "aws_autoscaling_policy" "down" {
 resource "aws_cloudwatch_metric_alarm" "cpu_high_ec2" {
   alarm_name          = "${var.project_name}-ec2_cpu_utilization_high"
   comparison_operator = "GreaterThanOrEqualToThreshold"
-  evaluation_periods  = "4"
+  evaluation_periods  = "3"
   metric_name         = "CPUUtilization"
   namespace           = "AWS/ECS"
   period              = "300"
@@ -180,7 +180,7 @@ resource "aws_cloudwatch_metric_alarm" "cpu_high_ec2" {
 resource "aws_cloudwatch_metric_alarm" "cpu_low_ec2" {
   alarm_name          = "${var.project_name}-ec2_cpu_utilization_low"
   comparison_operator = "LessThanOrEqualToThreshold"
-  evaluation_periods  = "4"
+  evaluation_periods  = "3"
   metric_name         = "CPUUtilization"
   namespace           = "AWS/ECS"
   period              = "300"
@@ -243,7 +243,7 @@ resource "aws_appautoscaling_policy" "down_web" {
 resource "aws_cloudwatch_metric_alarm" "service_cpu_high_web" {
   alarm_name          = "${var.project_name}-web_cpu_utilization_high"
   comparison_operator = "GreaterThanOrEqualToThreshold"
-  evaluation_periods  = "4"
+  evaluation_periods  = "3"
   metric_name         = "CPUUtilization"
   namespace           = "AWS/ECS"
   period              = "60"
@@ -261,7 +261,7 @@ resource "aws_cloudwatch_metric_alarm" "service_cpu_high_web" {
 resource "aws_cloudwatch_metric_alarm" "service_cpu_low_web" {
   alarm_name          = "${var.project_name}-web_cpu_utilization_low"
   comparison_operator = "LessThanOrEqualToThreshold"
-  evaluation_periods  = "4"
+  evaluation_periods  = "3"
   metric_name         = "CPUUtilization"
   namespace           = "AWS/ECS"
   period              = "60"
