@@ -5,7 +5,7 @@
 
 This is a Node.js Anagram app that has been built out with Terraform onto AWS and deployed by Github Actions.
 
-![Infrastructure](anagram-app-infrastructure.svg)
+![Infrastructure](infrastructure.svg)
 
 ## Getting started
 The deployment of this web application and infrasturcture is split into two steps.
@@ -82,4 +82,4 @@ or
 From commandline `curl https://slime.wtf/wordhere`
 
 ## Resource Graph
-![Infrastructure Terraform](https://raw.githubusercontent.com/draalin/anagram-app-infrastructure/master/anagram-app-infrastructure-terraform.svg?sanitize=true)
+![Infrastructure Terraform](https://raw.githubusercontent.com/draalin/anagram-app-infrastructure/master/infrastructure-terraform.svg?sanitize=true)
